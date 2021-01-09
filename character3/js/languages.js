@@ -4,7 +4,7 @@ addBonusLanguages() - returns Randomly selected Sentinel Bonus Languages
 	  
 function fnAddLanguages (intelligenceModifier, luckySign, luckModifier) 
 {
-		var bonusLanguages = intelligenceModifier;
+		var bonusLanguages = intelligenceModifier * 2;
 		var additionalLanguages ="";
 
   	if (luckySign.luckySign != undefined && luckySign.luckySign === "The Universal Translator")

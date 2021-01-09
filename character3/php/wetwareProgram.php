@@ -1,4 +1,61 @@
 <?php
+
+function getPatronAI($input)
+{
+    $patronAI = "";
+
+    switch ($input) 
+    {
+        case 0:
+            $patronAI = "Achroma";
+          break;
+          
+        case 1:
+            $patronAI = "Gaea";
+          break;
+          
+        case 2:
+            $patronAI = "Hale-E";
+          break;
+          
+        case 3:
+            $patronAI = "Hexacoda";
+          break;
+          
+        case 4:
+            $patronAI = "Mangala";
+          break;
+          
+        case 5:
+            $patronAI = "ME10";
+          break;
+          
+        case 6:
+            $patronAI = "Tetraplex";
+          break;
+          
+        case 7:
+            $patronAI = "Ukur";
+          break;
+
+          default:
+          $patronAI = "000000000";
+        }
+
+        return $patronAI;
+}
+
+/*
+Achroma = 0;
+Gaea = 1;
+Hale-E = 2;
+Hexacoda = 3;
+Mangala = 4;
+ME10 = 5;
+Tetraplex = 6;
+Ukur = 7;
+ */
+
 /*Wetware Program Level 1*/
     
     function getWetwareLevel1($patronAI)

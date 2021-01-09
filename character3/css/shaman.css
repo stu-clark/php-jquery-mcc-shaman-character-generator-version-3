@@ -366,12 +366,20 @@ body{
     font-size: 1.2em;
 }
 
-#roverSpecialAbility
+#maxWetwareLevel
 {
     position:absolute;
     top: 520px;
     left: 680px;
     font-size: 1.2em;
+}
+
+#patronAI
+{
+    position:absolute;
+    top: 754px;
+    left: 750px;
+    font-size: 0.8em;
 }
 
 #criticalDieTable{

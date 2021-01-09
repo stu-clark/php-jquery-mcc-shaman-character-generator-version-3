@@ -1,54 +1,30 @@
 <?php
 
-/*Rover*/
+/*Shaman*/
 
-function getMeleeAttackBonus($level)
+function getAttackBonus($level)
 {
   $attacBonus = 0;
   
-  if($level == 2)
+  if($level >= 2 && $level <= 4)
   {
       $attacBonus = 1;
   }
   
-  if($level >= 3 && $level <= 4)
+  if($level >= 5 && $level <= 6)
   {
       $attacBonus = 2;
   }
   
-  if($level == 5)
+  if($level >= 7 && $level <= 8)
   {
       $attacBonus = 3;
   }
-  
-  if($level == 6)
+
+  if($level >= 9 && $level <= 10)
   {
       $attacBonus = 4;
   }
-
-  if($level >= 7 && $level <= 8)
-  {
-      $attacBonus = 5;
-  }
-
-  if($level == 9)
-  {
-      $attacBonus = 6;
-  }
-  
-  if($level == 10)
-  {
-      $attacBonus = 7;
-  }
-
-
-  return $attacBonus;
-}
-
-
-function getMissileAttackBonus($level)
-{
-  $attacBonus = $level;
 
   return $attacBonus;
 }
@@ -81,7 +57,18 @@ function savingThrowReflex($level)
 function savingThrowFort($level)
 {
 
-  $fort = $level;
+  $fort = 1;
+
+  
+  if($level >= 6 && $level <= 8)
+  {
+      $fort = 2;
+  }
+
+  if($level >= 9 && $level <= 10)
+  {
+      $fort = 3;
+  }
 
   return $fort;
 
@@ -97,20 +84,26 @@ function savingThrowWill($level)
         $will = 2;
     }
 
-    if($level >= 5 && $level <= 6)
+    if($level == 5)
     {
         $will = 3;
     }
 
-    
-    if($level >= 7 && $level <= 9)
+
+    if($level >= 6 && $level <= 7)
     {
         $will = 4;
     }
 
-    if($level == 10)
+    
+    if($level >= 8 && $level <= 9)
     {
         $will = 5;
+    }
+
+    if($level == 10)
+    {
+        $will = 6;
     }
 
     return $will;
@@ -138,10 +131,16 @@ function actionDice($level)
         $actionDice = "1d20+1d16";
     }
 
-    if($level >= 7)
+    if($level >= 7 && $level >= 9)
     {
         $actionDice = "1d20 (x2)";
     }
+
+    if($level == 10)
+    {
+        $actionDice = "1d20 (x3)";
+    }
+
 
 
     return $actionDice;
@@ -156,43 +155,43 @@ function criticalDie($level)
     switch ($level)
     {
             case 1:
-                $critical = "1d10/II";
+                $critical = "1d6/I";
                 break;
 
             case 2:
-                $critical = "1d12/II";
+                $critical = "1d6/I";
                 break;
       
             case 3:
-            $critical = "1d14/II";
+            $critical = "1d8/I";
             break;
 
             case 4:
-                $critical = "1d16/II";
+                $critical = "1d8/I";
                 break;
       
             case 5:
-                $critical = "1d20/II";
+                $critical = "1d10/I";
                 break;
 
             case 6:
-                $critical = "1d24/II";
+                $critical = "1d10/I";
                 break;
       
             case 7:
-            $critical = "1d30/II";
+            $critical = "1d12/I";
             break;
             
             case 8:
-                $critical = "1d30+2/II";
+                $critical = "1d12/I";
                 break;
       
             case 9:
-            $critical = "1d30+4/II";
+            $critical = "1d14/I";
             break;
             
             case 10:
-                $critical = "1d30+6/II";
+                $critical = "1d14/I";
                 break;
       
             default:
@@ -208,27 +207,27 @@ function title($level)
 
         if($level == 1)
         {
-            $title = "Tenderfoot";
+            $title = "Acolyte";
         }
         else if($level == 2)
         {
-            $title = "Trailwalker";
+            $title = "Adept";
         }
         else if($level == 3)
         {
-            $title = "Pathfinder";
+            $title = "Shaman";
         }
         else if($level == 4)
         {
-            $title = "Explorer";
+            $title = "Seer-Shaman";
         }
         else if($level == 5)
         {
-            $title = "Rover";
+            $title = "High-Shaman";
         }
         else
         {
-            $title = "Alpha-Rover";
+            $title = "Shaman Supreme";
         }
 
 return $title;
@@ -242,43 +241,43 @@ function getArtifactCheckBonus($level)
     switch ($level) 
     {
         case 1:
-            $bonus = 2;
-          break;
-          
-        case 2:
             $bonus = 3;
           break;
           
-        case 3:
+        case 2:
             $bonus = 4;
+          break;
+          
+        case 3:
+            $bonus = 5;
           break;
 
         case 4:
-            $bonus = 5;
+            $bonus = 6;
           break;
           
         case 5:
-            $bonus = 5;
-          break;
-          
-        case 6:
-            $bonus = 6;
-          break;
-
-          case 7:
             $bonus = 7;
           break;
           
-        case 8:
+        case 6:
             $bonus = 8;
           break;
-          
-        case 9:
+
+          case 7:
             $bonus = 9;
           break;
           
-        case 10:
+        case 8:
             $bonus = 10;
+          break;
+          
+        case 9:
+            $bonus = 11;
+          break;
+          
+        case 10:
+            $bonus = 12;
           break;
           
         default:
@@ -289,50 +288,50 @@ function getArtifactCheckBonus($level)
 }
 
 
-function getRoverSpecialAbility($level)
+function getMaxWetwareLevel($level)
 {
     $bonus = '';
 
     switch ($level) 
     {
         case 1:
-            $bonus = '+1';
+            $bonus = '1';
           break;
           
         case 2:
-            $bonus = '+3';
+            $bonus = '1';
           break;
           
         case 3:
-            $bonus = '+5';
+            $bonus = '2';
           break;
 
         case 4:
-            $bonus = '+7';
+            $bonus = '2';
           break;
           
         case 5:
-            $bonus = '+8';
+            $bonus = '3';
           break;
           
         case 6:
-            $bonus = '+9';
+            $bonus = '3';
           break;
 
           case 7:
-            $bonus = '+10';
+            $bonus = '4';
           break;
           
         case 8:
-            $bonus = '+11';
+            $bonus = '4';
           break;
           
         case 9:
-            $bonus = '+12';
+            $bonus = '5';
           break;
           
         case 10:
-            $bonus = '+13';
+            $bonus = '5';
           break;
           
         default:

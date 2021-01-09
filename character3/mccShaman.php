@@ -88,6 +88,21 @@
         }
 
         
+        if(isset($_POST['theCheckRandomPatronAIBox']) && $_POST['theCheckRandomPatronAIBox'] == 1) 
+        {
+            $patronAiNumber = rand(0, 7);
+
+        }
+        else
+        {
+            $patronAiNumberString = $_POST["thePatronAI"];
+            $patronAiNumber = (int)$patronAiNumberString;
+
+        } 
+
+        $patronAI = getPatronAI($patronAiNumber);
+
+        
         if(isset($_POST["theArtifact1V3"]))
         {
             $artifact1 = $_POST["theArtifact1V3"];
@@ -169,13 +184,13 @@
             rsort($abilityScoreArray);
 
             $strengthBase = $abilityScoreArray[4];
-            $agility = $abilityScoreArray[0];
-            $stamina = $abilityScoreArray[5];
-            $personality = $abilityScoreArray[2];
-            $intelligence = $abilityScoreArray[3];
-            $luck = $abilityScoreArray[1];
+            $agility = $abilityScoreArray[5];
+            $stamina = $abilityScoreArray[3];
+            $personality = $abilityScoreArray[1];
+            $intelligence = $abilityScoreArray[0];
+            $luck = $abilityScoreArray[2];
 
-            $optimizeAbilityScoreMessage = "Ability Scores optimized in the order of Agi, Luck, Per, Int, Str, Sta.";
+            $optimizeAbilityScoreMessage = "Ability Scores optimized in the order of Int, Per, Luck, Sta, Str, Agi";
         }
         else
         {
@@ -341,8 +356,9 @@
 
     $profession = getProfession();
 
-    $attackBonusMelee = getMeleeAttackBonus($level);
-    $attackBonusMissile = getMissileAttackBonus($level);
+    $attackBonus = getAttackBonus($level);
+
+    $maxWetwareLevel = getMaxWetwareLevel($level);
 
     
     
@@ -526,6 +542,13 @@
            ?>
         </span>
 
+        
+       <span id="patronAI">
+           <?php
+                echo $patronAI;
+           ?>
+        </span>
+
               
        <span id="armourName">
            <?php
@@ -583,6 +606,14 @@
         <span id="title">
             <?php
                 echo $title;
+            ?>
+        </span>
+
+        
+        
+        <span id="maxWetwareLevel">
+            <?php
+                echo $maxWetwareLevel;
             ?>
         </span>
 
@@ -716,11 +747,11 @@
 			"luckySign": birthAugur.luckySign,
             "luckyRoll": birthAugur.luckyRoll,
             "move": <?php echo $speed ?> + addLuckToSpeed (birthAugur, luckMod),
-            "addLanguages": "Nu-Speak, Security Acccess " + bonusLanguages,
+            "addLanguages": "Nu-Speak " + bonusLanguages,
             "armourClass": <?php echo $totalAcDefense ?> + baseAC,
             "hp": getHitPoints (level, staminaMod) + hitPointAdjustPerLevel(birthAugur,  luckMod),
-			"melee": strengthMod + <?php echo $attackBonusMelee ?> + meleeAdjust(birthAugur, luckMod),
-			"range": agilityMod +  <?php echo $attackBonusMissile ?> + rangeAdjust(birthAugur, luckMod),
+			"melee": strengthMod + <?php echo $attackBonus ?> + meleeAdjust(birthAugur, luckMod),
+			"range": agilityMod +  <?php echo $attackBonus ?> + rangeAdjust(birthAugur, luckMod),
 			"meleeDamage": strengthMod + adjustMeleeDamage(birthAugur, luckMod),
             "rangeDamage": adjustRangeDamage(birthAugur, luckMod),
             "techLevel": maxTechLevel,
