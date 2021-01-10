@@ -131,7 +131,7 @@ function actionDice($level)
         $actionDice = "1d20+1d16";
     }
 
-    if($level >= 7 && $level >= 9)
+    if($level >= 7 && $level <= 9)
     {
         $actionDice = "1d20 (x2)";
     }

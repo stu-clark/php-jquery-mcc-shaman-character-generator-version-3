@@ -258,8 +258,7 @@
         $weaponArray = array();
         $weaponNames = array();
         $weaponDamage = array();
-    
-    
+
 
     //For Random Select gear
     if(isset($_POST['thecheckBoxRandomWeaponsV3']) && $_POST['thecheckBoxRandomWeaponsV3'] == 1) 
@@ -361,6 +360,46 @@
     $maxWetwareLevel = getMaxWetwareLevel($level);
 
     
+    $wetwareProgramLevel1 = array();
+
+    $wetwareProgramLevel1 = getWetwareLevel1($patronAiNumber);
+
+    $programName1 = $wetwareProgramLevel1[1];
+    $programLevel1 = $wetwareProgramLevel1[0];
+    $programRange1 = $wetwareProgramLevel1[2];
+    $programDuration1 = $wetwareProgramLevel1[3];
+    $programActivation1 = $wetwareProgramLevel1[4];
+    $programSave1 = $wetwareProgramLevel1[5];
+    $programPage1 = $wetwareProgramLevel1[6];
+    $programManifest1 = $wetwareProgramLevel1[7];
+
+    $wetwareProgramLevel2 = array();
+
+    $wetwareProgramLevel2 = getWetwareLevel2($level, $patronAiNumber);
+
+    $programName2 = $wetwareProgramLevel2[1];
+    $programLevel2 = $wetwareProgramLevel2[0];
+    $programRange2 = $wetwareProgramLevel2[2];
+    $programDuration2 = $wetwareProgramLevel2[3];
+    $programActivation2 = $wetwareProgramLevel2[4];
+    $programSave2 = $wetwareProgramLevel2[5];
+    $programPage2 = $wetwareProgramLevel2[6];
+    $programManifest2 = $wetwareProgramLevel2[7];
+
+    $wetwareProgramLevel3 = array();
+
+    $wetwareProgramLevel3 = getWetwareLevel3($level, $patronAiNumber);
+
+    $programName3 = $wetwareProgramLevel3[1];
+    $programLevel3 = $wetwareProgramLevel3[0];
+    $programRange3 = $wetwareProgramLevel3[2];
+    $programDuration3 = $wetwareProgramLevel3[3];
+    $programActivation3 = $wetwareProgramLevel3[4];
+    $programSave3 = $wetwareProgramLevel3[5];
+    $programPage3 = $wetwareProgramLevel3[6];
+    $programManifest3 = $wetwareProgramLevel3[7];
+
+
     
     ?>
 
@@ -616,6 +655,18 @@
                 echo $maxWetwareLevel;
             ?>
         </span>
+
+        
+        <span id="wetwarePrograms">
+            <?php
+                echo '<span class="wetwareName">' . $programName1 . '</span>' . '<br/><br/>Level: ' . $programLevel1 . '<span class="wetwareRange">Range: ' . $programRange1 . '</span>' . '<br/>Duration: ' . $programDuration1 . '<span class="wetwarePage">Page: ' . $programPage1 . '</span><br/>Activation: ' . $programActivation1 . '<span class="wetwareActivation">Save: ' . $programSave1 . '</span><br/>Manifestation: ' . $programManifest1;
+
+                echo '<br/><br/><span class="wetwareName">' . $programName2 . '</span>' . '<br/><br/>Level: ' . $programLevel2 . '<span class="wetwareRange">Range: ' . $programRange2 . '</span>' . '<br/>Duration: ' . $programDuration2 . '<span class="wetwarePage">Page:' . $programPage2 . '</span><br/>Activation: ' . $programActivation2 . '<span class="wetwareActivation">Save: ' . $programSave2 . '</span><br/>Manifestation: ' . $programManifest2;
+
+                echo '<br/><br/><span class="wetwareName">' . $programName3 . '</span>' . '<br/><br/>Level: ' . $programLevel3 . '<span class="wetwareRange">Range: ' . $programRange3 . '</span>' . '<br/>Duration: ' . $programDuration3 . '<span class="wetwarePage">Page:' . $programPage3 . '</span><br/>Activation: ' . $programActivation3 . '<span class="wetwareActivation">Save: ' . $programSave3 . '</span><br/>Manifestation: ' . $programManifest3;
+            ?>
+        </span>
+
 
 
 

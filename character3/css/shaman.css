@@ -125,9 +125,9 @@ body{
 #abilityScoreGeneration{
     position:absolute;
     top: 1145px;
-    left: 685px;
+    left: 360px;
     font-size: 0.5em;
-    width: 225px;
+    width: 300px;
 }
 
 
@@ -382,6 +382,38 @@ body{
     font-size: 0.8em;
 }
 
+#wetwarePrograms{
+    position:absolute;
+    top: 820px;
+    left: 680px;
+    font-size: 0.5em;
+    width: 250px;
+}
+
+
+#wetwarePrograms>.wetwareName{
+    position: absolute;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+#wetwarePrograms>.wetwareRange{
+    position: absolute;
+    left: 100px;
+}
+
+#wetwarePrograms>.wetwarePage{
+    position: absolute;
+    left: 150px;
+}
+
+#wetwarePrograms>.wetwareActivation{
+    position: absolute;
+    left: 130px;
+}
+
+
+
 #criticalDieTable{
     position:absolute;
     top: 250px;
@@ -467,17 +499,6 @@ body{
 	font-size: 1.2em;
 }
 
-
-
-
-
-
-#dieRollMethod{
-    position: absolute;
-    top: 100px;
-    left:  50px;
-	font-size: 0.5em;
-}
 
 
 
