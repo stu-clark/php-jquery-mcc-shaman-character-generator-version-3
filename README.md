@@ -2,6 +2,12 @@
 Designed with PHP and jQuery, the Mutant Crawl Classics Shaman Character Generator Version 3 randomly generates a character. The generator allows for the user to input different parameters to determine the character's level, equipment, weapons, alignment, etc.
 
 
+--------------------------------------
+
+Update 1.02: 2020-01-09
+
+Updated mccShaman.php, shaman.css, classDetails.php, weapons.php and wetwareProgram.php.  Deleted rover.png.  Added a new character sheet (shaman.png).
+
 
 Update 1.01: 2020-01-08
 
