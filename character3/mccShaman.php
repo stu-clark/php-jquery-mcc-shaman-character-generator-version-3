@@ -659,11 +659,11 @@
         
         <span id="wetwarePrograms">
             <?php
-                echo '<span class="wetwareName">' . $programName1 . '</span>' . '<br/><br/>Level: ' . $programLevel1 . '<span class="wetwareRange">Range: ' . $programRange1 . '</span>' . '<br/>Duration: ' . $programDuration1 . '<span class="wetwarePage">Page: ' . $programPage1 . '</span><br/>Activation: ' . $programActivation1 . '<span class="wetwareActivation">Save: ' . $programSave1 . '</span><br/>Manifestation: ' . $programManifest1;
+                echo '<span class="wetwareName">' . $programName1 . '</span>' . '<br/><br/>' . $programLevel1 . '<span class="wetwareRange">' . $programRange1 . '</span>' . '<br/>' . $programDuration1 . '<span class="wetwarePage"> ' . $programPage1 . '</span><br/>' . $programActivation1 . '<span class="wetwareActivation">' . $programSave1 . '</span><br/><br/>' . $programManifest1;
 
-                echo '<br/><br/><span class="wetwareName">' . $programName2 . '</span>' . '<br/><br/>Level: ' . $programLevel2 . '<span class="wetwareRange">Range: ' . $programRange2 . '</span>' . '<br/>Duration: ' . $programDuration2 . '<span class="wetwarePage">Page:' . $programPage2 . '</span><br/>Activation: ' . $programActivation2 . '<span class="wetwareActivation">Save: ' . $programSave2 . '</span><br/>Manifestation: ' . $programManifest2;
+                echo '<br/><br/><span class="wetwareName">' . $programName2 . '</span>' . '<br/><br/>' . $programLevel2 . '<span class="wetwareRange">' . $programRange2 . '</span>' . '<br/>' . $programDuration2 . '<span class="wetwarePage">' . $programPage2 . '</span><br/>' . $programActivation2 . '<span class="wetwareActivation">' . $programSave2 . '</span><br/><br/>' . $programManifest2;
 
-                echo '<br/><br/><span class="wetwareName">' . $programName3 . '</span>' . '<br/><br/>Level: ' . $programLevel3 . '<span class="wetwareRange">Range: ' . $programRange3 . '</span>' . '<br/>Duration: ' . $programDuration3 . '<span class="wetwarePage">Page:' . $programPage3 . '</span><br/>Activation: ' . $programActivation3 . '<span class="wetwareActivation">Save: ' . $programSave3 . '</span><br/>Manifestation: ' . $programManifest3;
+                echo '<br/><br/><span class="wetwareName">' . $programName3 . '</span>' . '<br/><br/>' . $programLevel3 . '<span class="wetwareRange">' . $programRange3 . '</span>' . '<br/>' . $programDuration3 . '<span class="wetwarePage">' . $programPage3 . '</span><br/>' . $programActivation3 . '<span class="wetwareActivation">' . $programSave3 . '</span><br/><br/>' . $programManifest3;
             ?>
         </span>
 
