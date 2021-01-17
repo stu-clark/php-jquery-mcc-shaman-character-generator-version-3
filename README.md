@@ -4,7 +4,18 @@ Designed with PHP and jQuery, the Mutant Crawl Classics Shaman Character Generat
 
 --------------------------------------
 
+Live version of the Mutant Crawl Classics (MCC) Shaman Character Generator Version 3 is found at:
 
+Artifacts of the Ancient Ones: A Mutant Crawl Classics Fan Site
+
+https://www.oldschooladventures.org/mcc/classes/shaman/
+
+-------------------------------------------
+
+
+Update 1.04: 2021-01-16
+
+MCC Shaman Generator Launch Page added.
 
 Update 1.03: 2021-01-11
 
