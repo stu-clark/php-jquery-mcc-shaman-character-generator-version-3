@@ -113,7 +113,18 @@
             
             <br/>
             <br/>
-                
+                				
+                  
+			<div class="formIputDescription">
+           <span class="footnote3"><input type="checkbox" id="checkAlternativeWetwareV3" value="1" name="theChecklternativeWetware">Use Alternative Wetware programs**</span>
+           </div>
+				
+				<div class="formIputDescriptionAA">
+				<p>**Wetware programs from Enchiridion of the Computarchs</p>
+
+				</div>
+
+		   <br/>
                     
 
                 
