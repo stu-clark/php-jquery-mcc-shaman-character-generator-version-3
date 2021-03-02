@@ -13,6 +13,10 @@ https://www.oldschooladventures.org/mcc/classes/shaman/
 -------------------------------------------
 
 
+Update 1.05: 2021-03-01
+
+A new feature has been added to the MCC Shaman Character Generator, which allows the user to select the option of generating the wetware programs from the 'Enchiridion of the Computarchs' suppliment book.  A specific character sheet has been added for the optional Shaman build.
+
 Update 1.04: 2021-01-16
 
 MCC Shaman Generator Launch Page added.
