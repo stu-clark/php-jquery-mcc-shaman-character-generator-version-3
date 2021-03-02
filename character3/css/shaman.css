@@ -413,6 +413,68 @@ body{
 }
 
 
+#wetwarePrograms2{
+    position:absolute;
+    top: 1340px;
+    left: 110px;
+    font-size: 0.5em;
+    width: 330px;
+}
+
+
+#wetwarePrograms2>.wetwareName2{
+    position: absolute;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+#wetwarePrograms2>.wetwareRange2{
+    position: absolute;
+    left: 150px;
+}
+
+#wetwarePrograms2>.wetwarePage2{
+    position: absolute;
+    left: 150px;
+}
+
+#wetwarePrograms2>.wetwareActivation2{
+    position: absolute;
+    left: 150px;
+}
+
+
+#wetwarePrograms2b{
+    position:absolute;
+    top: 1340px;
+    left: 545px;
+    font-size: 0.5em;
+    width: 330px;
+}
+
+
+#wetwarePrograms2b>.wetwareName2{
+    position: absolute;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+#wetwarePrograms2b>.wetwareRange2{
+    position: absolute;
+    left: 150px;
+}
+
+#wetwarePrograms2b>.wetwarePage2{
+    position: absolute;
+    left: 150px;
+}
+
+#wetwarePrograms2b>.wetwareActivation2{
+    position: absolute;
+    left: 150px;
+}
+
+
 
 #criticalDieTable{
     position:absolute;
